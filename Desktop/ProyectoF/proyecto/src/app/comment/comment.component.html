@@ -1,0 +1,10 @@
+<div *ngFor="let comment of comments">
+    <p>{{ comment.text }}</p>
+    <button (click)="deleteComment(comment.id)">Eliminar</button>
+  </div>
+  
+  <form (ngSubmit)="addComment()">
+    <input type="text" [(ngModel)]="newCommentText" name="newCommentText">
+    <button type="submit">Agregar Comentario</button>
+  </form>
+  

@@ -1,0 +1,14 @@
+
+<app-cardpeliculas></app-cardpeliculas>
+
+<app-comment></app-comment>
+
+<div *ngFor="let comment of comments">
+    <p>{{ comment.text }}</p>
+    <button (click)="deleteComment(comment.id)">Eliminar</button>
+  </div>
+  
+  <form (ngSubmit)="addComment(newComment.value)">
+    <input type="text" #newComment>
+    <button type="submit">Agregar Comentario</button>
+  </form>
